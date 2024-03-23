@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // relación de usuarios con cursos a través de un grupo
+
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class);
+    }
 }
