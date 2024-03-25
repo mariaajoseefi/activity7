@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
+
+    use HasFactory;
+
     // relación de cursos tiene un robotics kit
     public function roboticsKit()
     {
